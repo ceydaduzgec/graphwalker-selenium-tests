@@ -10,7 +10,7 @@ public class Runner {
     TestExecutor executor = new TestExecutor(
             //SearchTest.class
             //SignInTest.class
-            ArticleTest.class
+            CommentTest.class
     );
     Result result = executor.execute(true);
     System.out.println("Done: [" + result.getResults().toString(2) + "]");
