@@ -1,58 +1,70 @@
 {
-  "models": [
+  "models":[
     {
-      "edges": [
+      "edges":[
         {
-          "id": "3182883a-6465-4ce3-87ab-f7a703938bda",
-          "name": "e_AutomaticRedirect",
-          "sourceVertexId": "dc60ace3-3600-4c1b-b667-d56cdb10867a",
-          "targetVertexId": "ff77971c-d090-4cc7-9690-ccdd0379e072"
+          "id":"3182883a-6465-4ce3-87ab-f7a703938bda",
+          "name":"e_AutomaticRedirect",
+          "sourceVertexId":"dc60ace3-3600-4c1b-b667-d56cdb10867a",
+          "targetVertexId":"ff77971c-d090-4cc7-9690-ccdd0379e072"
         },
         {
-          "id": "f5b40591-0bb2-4c9a-b4d0-e7a0ffe90309",
-          "name": "e_FillInformation",
-          "sourceVertexId": "ff77971c-d090-4cc7-9690-ccdd0379e072",
-          "targetVertexId": "c6298072-9aa7-4e5b-8cb5-e9315f291aad"
+          "id":"f5b40591-0bb2-4c9a-b4d0-e7a0ffe90309",
+          "name":"e_ValidInformation",
+          "sourceVertexId":"ff77971c-d090-4cc7-9690-ccdd0379e072",
+          "targetVertexId":"c6298072-9aa7-4e5b-8cb5-e9315f291aad"
         },
         {
-          "id": "a7b5fda5-bc9d-487c-8f20-08a221a5deb8",
-          "name": "e_ClickLogout",
-          "sourceVertexId": "c6298072-9aa7-4e5b-8cb5-e9315f291aad",
-          "targetVertexId": "dc60ace3-3600-4c1b-b667-d56cdb10867a"
+          "id":"93c968fe-ca3f-4b04-a56b-7c3db10a4fea",
+          "name":"e_SubmitForm",
+          "sourceVertexId":"c6298072-9aa7-4e5b-8cb5-e9315f291aad",
+          "targetVertexId":"ff77971c-d090-4cc7-9690-ccdd0379e072"
+        },
+        {
+          "id":"a7b5fda5-bc9d-487c-8f20-08a221a5deb8",
+          "name":"e_ClickLogout",
+          "sourceVertexId":"c6298072-9aa7-4e5b-8cb5-e9315f291aad",
+          "targetVertexId":"dc60ace3-3600-4c1b-b667-d56cdb10867a"
+        },
+        {
+          "id":"a10bfd85-8162-46d7-9b86-07ed9ff4d432",
+          "name":"e_InvalidInformation",
+          "sourceVertexId":"c6298072-9aa7-4e5b-8cb5-e9315f291aad",
+          "targetVertexId":"c6298072-9aa7-4e5b-8cb5-e9315f291aad"
         }
       ],
-      "generator": "random(edge_coverage(100))",
-      "id": "145bc468-ee22-44b0-8a9c-1456db8b3538",
-      "name": "SignIn",
-      "startElementId": "ff77971c-d090-4cc7-9690-ccdd0379e072",
-      "vertices": [
+      "generator":"random(edge_coverage(100))",
+      "id":"145bc468-ee22-44b0-8a9c-1456db8b3538",
+      "name":"SignIn",
+      "startElementId":"ff77971c-d090-4cc7-9690-ccdd0379e072",
+      "vertices":[
         {
-          "id": "ff77971c-d090-4cc7-9690-ccdd0379e072",
-          "name": "v_HomePage",
-          "properties": {
-            "x": 10,
-            "y": 553
+          "id":"ff77971c-d090-4cc7-9690-ccdd0379e072",
+          "name":"v_HomePage",
+          "properties":{
+            "x":10,
+            "y":553
           }
         },
         {
-          "id": "dc60ace3-3600-4c1b-b667-d56cdb10867a",
-          "name": "v_Logout",
-          "properties": {
-            "x": -305,
-            "y": 552
+          "id":"dc60ace3-3600-4c1b-b667-d56cdb10867a",
+          "name":"v_Logout",
+          "properties":{
+            "x":-305,
+            "y":552
           }
         },
         {
-          "id": "c6298072-9aa7-4e5b-8cb5-e9315f291aad",
-          "name": "v_SignIn",
-          "properties": {
-            "x": 11.180634066101648,
-            "y": 814.8017605394454
+          "id":"c6298072-9aa7-4e5b-8cb5-e9315f291aad",
+          "name":"v_SignIn",
+          "properties":{
+            "x":16.17916975858398,
+            "y":830.7970747553888
           }
         }
       ]
     }
   ],
-  "selectedModelIndex": 0,
-  "selectedElementId": "ff77971c-d090-4cc7-9690-ccdd0379e072"
+  "selectedModelIndex":0,
+  "selectedElementId":null
 }

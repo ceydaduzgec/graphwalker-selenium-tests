@@ -2,6 +2,7 @@ package com.mbtroads;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.graphwalker.core.machine.ExecutionContext;
+import org.graphwalker.java.annotation.AfterExecution;
 import org.graphwalker.java.annotation.BeforeExecution;
 import org.graphwalker.java.annotation.GraphWalker;
 import org.junit.jupiter.api.AfterEach;
@@ -29,7 +30,7 @@ public class SignInTest extends ExecutionContext implements SignIn {
         driver = new ChromeDriver(options);
     }
 
-    @AfterEach
+    @AfterExecution
     void tearDown() {
         driver.quit();
     }
@@ -47,7 +48,7 @@ public class SignInTest extends ExecutionContext implements SignIn {
     }
 
     @Override
-    public void e_FillInformation() {
+    public void e_ValidInformation() {
         driver.findElement(By.linkText("Sign In")).click();
         driver.findElement(By.id("id_login")).sendKeys("lol@gmail.com");
         driver.findElement(By.id("form-password-input")).sendKeys("123asd.FGH");
@@ -71,6 +72,20 @@ public class SignInTest extends ExecutionContext implements SignIn {
     public void v_SignIn() {
         String userName = driver.findElement(By.cssSelector(".user-section__button__first-name")).getText();
         assertEquals("lol", userName);
+    }
+
+
+    @Override
+    public void e_InvalidInformation() {
+        driver.findElement(By.linkText("Sign In")).click();
+        driver.findElement(By.id("id_login")).sendKeys("test@gmail.com");
+        driver.findElement(By.id("form-password-input")).sendKeys("123asd.FGH");
+        driver.findElement(By.cssSelector(".form__submit-button")).click();
+    }
+
+    @Override
+    public void e_SubmitForm(){
+        driver.findElement(By.cssSelector(".form__submit-button")).click();
     }
 
 }
