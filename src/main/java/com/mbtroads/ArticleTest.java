@@ -3,7 +3,6 @@ package com.mbtroads;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.graphwalker.core.machine.ExecutionContext;
 import org.graphwalker.java.annotation.*;
-import org.junit.jupiter.api.AfterEach;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -60,8 +59,8 @@ public class ArticleTest extends ExecutionContext implements Article {
 
     @Override
     public void v_ArticlesPage(){
-
-
+        assertEquals("Articles | Algorand Developer Portal", driver.getTitle());
+        assertEquals("https://developer.algorand.org/articles/", driver.getCurrentUrl());
     }
 
     @Override
@@ -90,12 +89,13 @@ public class ArticleTest extends ExecutionContext implements Article {
 
     @Override
     public void v_NewArticle(){
-
+        assertEquals("selenium | Algorand Developer Portal", driver.getTitle());
     }
 
     @Override
     public void e_SubmitArticle(){
         driver.findElement(By.id("submit_for_review")).click();
+        assertEquals("Are you sure you want to submit this article for review?", driver.switchTo().alert().getText());
         driver.switchTo().alert().accept();
 
     }
